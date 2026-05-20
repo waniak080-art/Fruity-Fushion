@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fruity Fushion</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #fff7f0;
+      color: #333;
+      line-height: 1.3;
+    }
+
+    header {
+      background: #ff9f68;
+      color: white;
+      padding: 35px 40px;
+      margin: 0px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    header h1 {
+      font-size: 32px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 20px;
+      font-size: 18px;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #ffe8d9;
+    }
+
+    .hero {
+      height: 80vh;
+      background: url(https://i.pinimg.com/736x/76/e4/1d/76e41daef8b51acc0a9f8696b62a2499.jpg) center/cover no-repeat;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: white;
+      padding: 20px;
+    }
+
+    .hero-content {
+      background: rgba(0,0,0,0.6);
+      padding: 40px;
+      border-radius: 20px;
+    }
+
+    .hero h2 {
+      font-size: 50px;
+      margin-bottom: 22px;
+    }
+
+    .hero p {
+      font-size: 22px;
+      margin-bottom: 20px;
+    }
+
+    .btn {
+      display: inline-block;
+      background: #ff9f68;
+      color: white;
+      padding: 12px 25px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-size: 18px;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: #ff7d3c;
+    }
+
+    section {
+      padding: 70px 40px;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 40px;
+      margin-bottom: 40px;
+      color: #ff7d3c;
+    }
+
+    .about {
+      display: flex;
+      gap: 40px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .about img {
+      width: 450px;
+      border-radius: 20px;
+      max-width: 100%;
+    }
+
+    .about-text {
+      flex: 1;
+    }
+
+    .about-text p {
+      font-size: 18px;
+      margin-bottom: 15px;
+    }
+    .Fruits-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+    }
+
+    .Fruits-card {
+      background: white;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      transition: 0.3s;
+    }
+
+    .Fruits-card:hover {
+      transform: translateY(-10px);
+    }
+
+    .Fruits-card img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+    }
+
+    .Fruits-card-content {
+      padding: 20px;
+    }
+
+    .Fruits-card h3 {
+      color: #ff7d3c;
+      margin-bottom: 10px;
+    }
+
+   
+    .contact {
+      background: #ffe8d9;
+      border-radius: 20px;
+      padding: 40px;
+      max-width: 700px;
+      margin: auto;
+    }
+
+    .contact form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .contact input,
+    .contact textarea {
+      margin-bottom: 20px;
+      padding: 15px;
+      border: none;
+      border-radius: 10px;
+      font-size: 16px;
+    }
+
+    .contact button {
+      background: #ff9f68;
+      color: white;
+      padding: 15px;
+      border: none;
+      border-radius: 10px;
+      font-size: 18px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .contact button:hover {
+      background: #ff7d3c;
+    }
+
+    footer {
+      background: #ff9f68;
+      color: rgb(117, 66, 32);
+      text-align: center;
+      padding: 20px;
+      margin-top: 50px;
+    }
+
+    @media(max-width: 768px) {
+      header {
+        flex-direction: column;
+      }
+
+      nav {
+        margin-top: 10px;
+      }
+
+      .hero h2 {
+        font-size: 38px;
+      }
+
+      .hero p {
+        font-size: 18px;
+      }
+
+      .about {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Fuity Fushion🥭</h1>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+      <a href="#product">Product</a>
+    </nav>
+  </header>
+
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <h2>Welcome to Fruity Fushion🥭 </h2>
+      <p>Fruity Fusion offers fresh, juicy, and healthy fruits full of natural flavor and nutrition.</p>
+      <a href="#Fruits" class="btn">Explore Fruits...</a>
+    </div>
+  </section>
+
+  <section id="about">
+    <h2 class="section-title">About Us</h2>
+    <div class="about">
+      <img src="https://i.pinimg.com/736x/98/b7/cd/98b7cd8460937058d63fa15245e28dbb.jpg" alt="fruits" />
+      <div class="about-text">
+        <p>
+          Fruity Fusion is a fresh and colorful world of delicious fruits and healthy flavors.
+        </p>
+        <p>
+         Our mission is to bring the sweetness of nature to everyone through juicy, tasty, and refreshing fruits.
+        </p>
+        <p>
+         From tropical mangoes to crunchy apples and refreshing watermelons, Fruity Fusion celebrates the beauty, nutrition, and freshness of every fruit. We believe that healthy eating can be fun, flavorful, and full of energy for everyone. 🍎🍉
+        </p>
+
+      </div>
+    </div>
+
+  </section>
+
+  </header>
+
+<section id="Fruits">
+    <h2 class="section-title">Popular Fruits</h2>
+
+    <div class="Fruits-container">
+
+      <div class="Fruits-card">
+        <img src="https://i.pinimg.com/736x/b8/45/67/b8456799c4195e8b00e3e1d4d3a7d61a.jpg" alt="Mango" />
+        <div class="Fruits-card-content">
+          <h3>Sweet mangoes</h3>
+          <p>Mangoes are sweet, juicy, and delicious tropical fruits loved for their rich flavor and bright yellow color🥭.</p>
+        </div>
+      </div>
+
+      <div class="Fruits-card">
+        <img src="https://i.pinimg.com/736x/35/b7/43/35b743d7bf5ada9873c59ae49d89839b.jpg" alt="watermelons" />
+        <div class="Fruits-card-content">
+          <h3>Refreshing Watermelons</h3>
+          <p>Watermelons are juicy, refreshing, and perfect for hot summer days🍉.</p>
+        </div>
+      </div>
+
+      <div class="Fruits-card">
+        <img src="https://i.pinimg.com/736x/92/03/95/9203953e1aa7f7b33806c7adbb6a5cd4.jpg" alt="Strawberries" />
+        <div class="Fruits-card-content">
+          <h3>Strawberries</h3>
+          <p>Strawberries are rich in vitamins, naturally delicious, and perfect for healthy snacks and desserts🍓.</p>
+        </div>
+      </div>
+
+      <div class="Fruits-card">
+        <img src="https://i.pinimg.com/736x/ee/0c/7e/ee0c7e430c7ae5108569ca61fe228176.jpg" alt="Apples" />
+        <div class="Fruits-card-content">
+          <h3>Fresh Apples</h3>
+          <p>Apples are crunchy, fresh, and full of natural goodness.Apples are rich in vitamins, delicious in taste, and perfect for a healthy lifestyle🍎.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2 class="section-title">Contact Us</h2>
+
+    <div class="contact">
+     <form id="contactForm">
+
+        <input type="text" placeholder="Enter Your Name" required />
+        <input type="email" placeholder="Enter Your Email" required />
+        <textarea rows="5" placeholder="Write Your Message"></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </section>
+  
+  <footer>
+    <p>© 2026 Fruity Fushion🥭 | Fresh Fruits Everyday</p>
+  </footer>
+
+
+
+<script>
+
+const form = document.getElementById("contactForm");
+
+form.addEventListener("submit", function(e){
+
+  e.preventDefault();
+
+  alert("Thank You For Contacting Fruity Fusion🍓");
+
+  form.reset();
+
+});
+
+</script>
+
+
+
+</body>
+</html>
+
